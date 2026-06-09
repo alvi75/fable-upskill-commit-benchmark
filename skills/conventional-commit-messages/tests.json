@@ -1,0 +1,22 @@
+[
+  {
+    "input": "Write a conventional commit message for this change: added a login feature to the authentication module.",
+    "expected": {"contains": ["feat(auth)", "login"]}
+  },
+  {
+    "input": "Write a conventional commit message for this change: fixed a null pointer crash in the payment service. This resolves issue #482.",
+    "expected": {"contains": ["fix(payment", "null", "Closes #482"]}
+  },
+  {
+    "input": "Write a conventional commit message for this change: changed the response format of the /users API endpoint from a bare array to a paginated object. Existing clients will break.",
+    "expected": {"contains": ["!:", "BREAKING CHANGE:", "/users"]}
+  },
+  {
+    "input": "Write a conventional commit message for this change: updated the installation instructions in the README.",
+    "expected": {"contains": ["docs(", "readme", "installation"]}
+  },
+  {
+    "input": "Write a conventional commit message for this change: upgraded the eslint dependency to version 9.",
+    "expected": {"contains": ["chore(deps)", "eslint"]}
+  }
+]

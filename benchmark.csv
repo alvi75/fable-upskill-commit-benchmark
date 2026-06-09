@@ -1,0 +1,16 @@
+model,run,baseline_pct,withskill_pct
+haiku,1,60,100
+haiku,2,100,100
+haiku,3,60,100
+haiku,4,100,100
+haiku,5,60,100
+anthropic.claude-opus-4-8,1,80,100
+anthropic.claude-opus-4-8,2,80,100
+anthropic.claude-opus-4-8,3,100,100
+anthropic.claude-opus-4-8,4,100,100
+anthropic.claude-opus-4-8,5,80,100
+sonnet,1,80,100
+sonnet,2,60,100
+sonnet,3,80,100
+sonnet,4,80,100
+sonnet,5,80,100

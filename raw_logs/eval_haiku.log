@@ -1,0 +1,48 @@
+Config source: project-local config 
+(/Users/zahidul.alvi/upskill/upskill.config.yaml)
+Resolved model plan:
+  Evaluation Model(s): haiku
+  Runs per model: 1
+  Baseline: on
+  Test Generation Model: anthropic.claude-fable-5
+Loaded 5 test case(s) from tests file: 
+./skills/conventional-commit-messages/tests.json
+Artifacts saved to: runs/2026_06_09_18_41
+Logging to: runs/2026_06_09_18_41
+Running 5 test cases...
+starting with-skill test 1/5
+starting with-skill test 2/5
+starting with-skill test 3/5
+starting with-skill test 4/5
+starting with-skill test 5/5
+finished with-skill test 5/5 (ok)
+finished with-skill test 4/5 (ok)
+finished with-skill test 1/5 (ok)
+finished with-skill test 2/5 (ok)
+finished with-skill test 3/5 (ok)
+starting baseline test 1/5
+starting baseline test 2/5
+starting baseline test 3/5
+starting baseline test 4/5
+starting baseline test 5/5
+finished baseline test 4/5 (ok)
+finished baseline test 5/5 (ok)
+finished baseline test 2/5 (ok)
+finished baseline test 1/5 (ok)
+finished baseline test 3/5 (ok)
+
+  1. Write a conventional commit message for   OK base  OK skill
+  2. Write a conventional commit message for   OK base  OK skill
+  3. Write a conventional commit message for   OK base  OK skill
+  4. Write a conventional commit message for   OK base  OK skill
+  5. Write a conventional commit message for   OK base  OK skill
+
+
+  baseline   ████████████████████   100%
+  with skill ████████████████████   100%  (+0%)
+
+  tokens: 3316 → 25744  (+676%)
+
+Artifacts saved to: runs/2026_06_09_18_41
+
+Recommendation: skill may not be beneficial
