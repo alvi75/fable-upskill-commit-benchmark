@@ -12,6 +12,13 @@ on Conventional Commits, using Hugging Face's `upskill` tool.
 
 - `skills/conventional-commit-messages/SKILL.md` — the Fable-authored skill (the artifact).
 - `skills/conventional-commit-messages/tests.json` — 5 fixed test cases with literal assertions.
+- `skills/code/SKILL.md` — general code-quality skill, structured as a router (Implementation /
+  Refactoring / Debugging / Review) so one skill dispatches by task type. **Draft scaffold authored
+  by Opus 4.8** to get a working file; the authoritative version should be regenerated with the
+  teacher model (Fable 5), matching the methodology of the commit skill. Not yet benchmarked.
+- `skills/code/tests.json` — 5 fixed cases with literal assertions targeting concrete, checkable
+  markers (type hints, docstrings, guard clauses, specific exceptions). Broader code quality needs
+  an LLM judge, which `upskill`'s `contains` grader does not provide — noted as a known limit.
 - `benchmark.csv` — raw per-run results (5 runs/model).
 - `raw_logs/` — full `upskill eval -v` output per model (auditable evidence).
 - `run_benchmark.sh` — reproduce the sweep.

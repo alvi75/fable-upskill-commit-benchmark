@@ -1,0 +1,22 @@
+[
+  {
+    "input": "Write a Python function read_config(path) that reads a JSON file and returns the parsed dict, raising a clear error if the file does not exist.",
+    "expected": {"contains": ["def read_config", "FileNotFoundError", "json"]}
+  },
+  {
+    "input": "Write a Python function safe_divide(a, b) that returns a / b, or None when b is zero. Include type hints.",
+    "expected": {"contains": ["def safe_divide", "None", "->"]}
+  },
+  {
+    "input": "Write a Python function celsius_to_fahrenheit(c) that converts Celsius to Fahrenheit. Include a type hint and a docstring.",
+    "expected": {"contains": ["def celsius_to_fahrenheit", "->", "\"\"\""]}
+  },
+  {
+    "input": "This function crashes on empty input. Fix it so it returns None when the list is empty: def first_item(items): return items[0]",
+    "expected": {"contains": ["def first_item", "None"]}
+  },
+  {
+    "input": "Write a Python function set_age(age) that raises an error if age is negative and otherwise returns age. Include a type hint and a docstring.",
+    "expected": {"contains": ["def set_age", "raise ValueError"]}
+  }
+]
