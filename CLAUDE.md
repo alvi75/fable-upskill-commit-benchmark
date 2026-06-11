@@ -22,9 +22,14 @@ on Conventional Commits, using Hugging Face's `upskill` tool.
 - `skills/code-fable/` — Fable-5-authored code-quality skill (`clean-idiomatic-code`), generated
   via `upskill generate ... --model anthropic.claude-fable-5 --test-gen-model sonnet --no-eval`.
   Tests live in `skill_meta.json` (Sonnet-generated, strict literal `contains`). First eval on
-  Opus 4.8 (n=1): baseline 60% vs with-skill 40% — **inconclusive / slightly worse**, dominated by
-  n=1 noise and over-strict auto-tests whose required tokens don't align with the skill's guidance.
-  Next step: refinement loop and/or skill↔test alignment before drawing conclusions.
+  Opus 4.8 (n=1): baseline 60% vs with-skill 40% — **inconclusive**, dominated by n=1 noise and
+  over-strict auto-tests whose required tokens don't align with the skill's guidance.
+  Re-eval against fair, skill-aligned tests (`skills/code/tests.json`): baseline **100%** vs
+  with-skill **100%** — Opus 4.8 is already at ceiling on these basic tasks, so the skill has no
+  headroom to lift it (and does not degrade it). Conclusion: skill value (as in the commit
+  benchmark, Haiku 76→100) needs **weaker student models** and/or **tests targeting specific
+  non-obvious conventions** models fail without the skill. Literal `contains` + a strong student
+  on easy tasks shows no signal.
 
 ## Notes on running upskill here
 
