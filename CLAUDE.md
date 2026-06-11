@@ -30,6 +30,13 @@ on Conventional Commits, using Hugging Face's `upskill` tool.
   benchmark, Haiku 76→100) needs **weaker student models** and/or **tests targeting specific
   non-obvious conventions** models fail without the skill. Literal `contains` + a strong student
   on easy tasks shows no signal.
+- `skills/code/tests_unprompted.json` — discriminating tests: **plain** prompts ("write a function
+  that…") with assertions on conventions the skill silently enforces (return type hint `->` +
+  docstring `"""`). Because the prompt does NOT ask for them, baseline weak models skip them and
+  the skill is what adds them. Haiku 4.5, n=5: baseline **12%** → with Fable skill **28%** (~2.3×).
+  Real lift, but modest/noisy — "always annotate + document" is a fuzzy multi-part convention, so
+  even with the skill Haiku only reaches ~1.4/5. Crisp single-convention skills (like the commit
+  one) yield far larger, cleaner lifts. Opus 4.8 stays at ceiling (no lift) on the same tests.
 
 ## Notes on running upskill here
 
