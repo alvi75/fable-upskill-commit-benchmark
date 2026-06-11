@@ -1,0 +1,116 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "generated_by": "anthropic.claude-fable-5",
+    "generated_at": "2026-06-11T03:44:44.051903Z",
+    "source_task": "write clean, correct, idiomatic code for implementation, refactoring, debugging, and review tasks \u2014 always using clear names, type hints, docstrings, guard clauses for edge cases, and specific exceptions",
+    "test_pass_rate": null,
+    "license": null,
+    "compatibility": null
+  },
+  "tests": [
+    {
+      "input": "Implement a Python function that calculates the average of a list of numbers, handling all edge cases properly.",
+      "context": null,
+      "expected": {
+        "contains": [
+          "def ",
+          "-> ",
+          "\"\"\"",
+          "raise",
+          "TypeError",
+          "ValueError",
+          "float",
+          "int"
+        ]
+      },
+      "verifiers": [],
+      "output_file": null,
+      "validator": null,
+      "validator_config": null
+    },
+    {
+      "input": "Refactor this Python function to be clean and idiomatic:\n\ndef calc(x, y, z):\n    if z == 0:\n        return None\n    r = x + y\n    result = r / z\n    return result",
+      "context": null,
+      "expected": {
+        "contains": [
+          "def ",
+          "-> ",
+          "\"\"\"",
+          "ZeroDivisionError",
+          "raise",
+          "float",
+          "int"
+        ]
+      },
+      "verifiers": [],
+      "output_file": null,
+      "validator": null,
+      "validator_config": null
+    },
+    {
+      "input": "Debug this Python function and rewrite it correctly with proper type hints and docstrings:\n\ndef find_user(users, id):\n    for u in users:\n        if u['id'] = id:\n            return u",
+      "context": null,
+      "expected": {
+        "contains": [
+          "def ",
+          "-> ",
+          "\"\"\"",
+          "==",
+          "raise",
+          "Optional",
+          "ValueError",
+          "KeyError"
+        ]
+      },
+      "verifiers": [],
+      "output_file": null,
+      "validator": null,
+      "validator_config": null
+    },
+    {
+      "input": "Write a Python class for a simple stack data structure with push, pop, and peek operations, following clean code principles.",
+      "context": null,
+      "expected": {
+        "contains": [
+          "class ",
+          "def push",
+          "def pop",
+          "def peek",
+          "\"\"\"",
+          "-> ",
+          "raise",
+          "IndexError",
+          "Generic",
+          "List",
+          "__len__"
+        ]
+      },
+      "verifiers": [],
+      "output_file": null,
+      "validator": null,
+      "validator_config": null
+    },
+    {
+      "input": "Review this code and rewrite it to be clean, idiomatic, and robust:\n\ndef process(data):\n    res = []\n    for i in range(len(data)):\n        if data[i] != None:\n            if type(data[i]) == str:\n                res.append(data[i].upper())\n    return res",
+      "context": null,
+      "expected": {
+        "contains": [
+          "def ",
+          "-> ",
+          "\"\"\"",
+          "isinstance",
+          "is not None",
+          "List",
+          "str",
+          "for ",
+          "in data"
+        ]
+      },
+      "verifiers": [],
+      "output_file": null,
+      "validator": null,
+      "validator_config": null
+    }
+  ]
+}

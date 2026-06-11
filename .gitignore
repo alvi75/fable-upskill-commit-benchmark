@@ -1,4 +1,6 @@
 runs/
+.fast-agent/
+fastagent.jsonl
 .venv/
 __pycache__/
 *.pyc
